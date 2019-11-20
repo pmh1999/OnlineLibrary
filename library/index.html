@@ -12,53 +12,65 @@
     <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
   <body>
-      <img src="./image/logo.png" class="float-left" alt="">
-      <div class="container">
-          <a class="float-right" id="dangnhap" href="#">Đăng Nhập</a>
-        <nav class="navbar navbar-expand-sm navbar-dark" id="header">
-            <img src="" alt="">
-            <a class="navbar-brand" href="#" style="color: #DCA333; font-size: 50px; margin-bottom: 10px;">Thư Viện</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation"></button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link disabled" id="trangchu" href="#" >Trang Chủ <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch Vụ</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Mượn sách</a>
-                            <a class="dropdown-item" href="#">Đăng ký phòng</a>
-                            <a class="dropdown-item" href="#">Đăng ký tài khoản</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giới Thiệu</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Giới thiệu thư viện</a>
-                            <a class="dropdown-item" href="#">Giới thiệu trường</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trợ Giúp</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Hướng dẫn sử dụng</a>
-                            <a class="dropdown-item" href="#">Nội quy</a>
-                        </div>
-                    </li>
-                </ul>               
+      <div class="header">
+            <div class="float-right">
+                <img src="./image/americaflag.png" href="#" id="flaga" alt="">
+                <img src="./image/vietnamflag.png" href="#" id="flagv" alt="">
             </div>
-        </nav>
-
-        <div class="input-group mb-3" style="width:50%;position: relative;left: 25%; ">
+         <div class="container">
+                <a class="float-right" id="dangnhap" href="#">Đăng Nhập</a>
+                
+              <nav class="navbar navbar-expand-sm navbar-dark">
+                  <img src="" alt="">
+                  <a class="navbar-brand" href="#" id="thuvien">
+                    <img src="./image/logo.png" class="float-left" style="margin-right:20px ;" id="logo" alt="">  
+                    Thư Viện <br> <p>University of Science</p></a>
+                  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                      aria-expanded="false" aria-label="Toggle navigation"></button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavId">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                          <li class="nav-item active">
+                              <a class="nav-link disabled" id="trangchu" href="#" >Trang Chủ <span class="sr-only">(current)</span></a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch Vụ</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                  <a class="dropdown-item" href="#">Mượn sách</a>
+                                  <a class="dropdown-item" href="#">Đăng ký phòng</a>
+                                  <a class="dropdown-item" href="#">Đăng ký tài khoản</a>
+                              </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giới Thiệu</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                  <a class="dropdown-item" href="#">Giới thiệu thư viện</a>
+                                  <a class="dropdown-item" href="#">Giới thiệu trường</a>
+                              </div>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trợ Giúp</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                                  <a class="dropdown-item" href="#">Hướng dẫn sử dụng</a>
+                                  <a class="dropdown-item" href="#">Nội quy</a>
+                              </div>
+                          </li>
+                      </ul>               
+                  </div>
+              </nav>
+      </div>     
+      </div>
+        
+      <div>
+        <div id="findInput"></div>
+        <div class="input-group mb-3 float" id="inputfind">
             <input id="inputsach" type="text" class="form-control" placeholder="Sách cần tìm" aria-label="Recipient's username" aria-describedby="button-addon2">
             <div class="input-group-append">
                 <button class="btn btn-inline-secondary" type="button" id="button-addon2"><img src="./image/glass.png" id="iconglass" alt=""></button>
             </div>
+            </div>
         </div>
-
-    </div>
+     </div>
+    
     <br>    
     <hr>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -127,20 +139,20 @@
 
         <div class="container footer">
             <div class="row">
-                <div class="col">
+                <div class="col-2">
                     <h1>Giờ Mở</h1>
                     <hr>
                     <p>Thứ 2-Thứ 6: ??giờ - ??giờ</p>
                     <p>Thứ 7&Chủ Nhật: Nghỉ</p>
                 </div>
-                <div class="col">
+                <div class="col-2" style="margin-left: 20%;">
                         <h1>Phản hồi</h1>
                         <hr>
                         <p>Facebook</p>
                         <p>Feedback</p>
                         <p>FAQ</p>
                 </div>
-                <div class="col">
+                <div class="col-3"style="margin-left: 20%;">
                         <h1>Liên lạc</h1>
                         <hr>
                         <p>Đường dây nóng: (###-###-#####)</p>

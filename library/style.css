@@ -2,17 +2,49 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
 }
-
 body{
-    background-image:linear-gradient(#73E2E9,#e3f2fd,#e3f2fd,#73E2E9) ;
-    height: 1888px;
+    height: 2500px;
+    min-height:100%; padding:0; margin:0; position:relative;
 }
-#header{
-    padding: 50px;
+.header{
+    padding: 10px;
+    background-image: linear-gradient(#73E2E9 90%, rgb(0, 157, 248));     
+}
+
+#logo{
+    height: 70px;
+    width: 90px;
+    margin-left: 10%;
+}
+
+#flaga,#flagv{
+    height: 30px;
+    width: 30px;  
+}
+
+#thuvien{
+    color: #DCA333;
+    font-size: 30px; 
+    font-weight: bold;
+}
+#thuvien p{
+    color: #DCA333;
+    font-size: 15px; 
 }
 #trangchu{
-    margin-left: 100px;
-    color: red;
+    margin-left: 50px;
+    color: red; 
+}
+
+#findInput{
+    padding: 150px;
+    background: url(./image/backgroundinput.jpg );
+    background-size:cover;
+    opacity: 0.5;
+}
+
+#inputfind{
+    width:50%;position: relative;left: 25%;
 }
 
 #nav-item{
@@ -29,7 +61,17 @@ body{
     height: 30px;
     width: 30px;
 }
-.footer {
-    margin-top: 300px;
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+}
+
+div h1{
     font-size: medium;
 }
+
+div p{
+    font-size: small;
+}
+
