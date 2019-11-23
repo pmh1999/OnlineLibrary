@@ -3,7 +3,7 @@
     font-size: 20px;
 }
 body{
-    height: 2500px;
+    height: 2200px;
     min-height:100%; padding:0; margin:0; position:relative;
 }
 .header{
@@ -64,14 +64,41 @@ body{
 .footer{
     position: absolute;
     bottom: 0;
-    left: 15%;
+    background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%);     
+    padding-top: 20px;
 }
 
-div h1{
-    font-size: medium;
-}
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
 
 div p{
     font-size: small;
 }
 
+img.d-block {
+    height: 200px;
+}
+
+button{
+    text-align: center;
+}
+
+.carousel-control-next-icon{
+    width: 60px;
+    height: 60px;
+}
+.carousel-control-prev-icon{
+    width: 60px;
+    height: 60px;
+}
+.form-inline input,button{
+    width: 150px; height: 30px;
+}
+.form-inline button{
+    font-size: small;
+    padding-top: 4px;
+    width: 100px;
+}
