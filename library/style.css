@@ -5,6 +5,7 @@
 
 body{
     height: 2200px;
+    min-width: 100%;
     min-height:100%; padding:0; margin:0; position:relative;
 }
 .header{
@@ -117,6 +118,7 @@ button{
     width: 100px;
 }
 
+<<<<<<< HEAD
 .pagination a {
     color: black;
     float: left;
@@ -141,4 +143,12 @@ button{
 
 .book .BookButton{
     text-align: center;
+=======
+.dropdown button{
+    font-size: small;
+    padding-top: 4px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top:10px ;
+>>>>>>> 4f1e207832fed7bb2ca1ce66aaf641b8938345d9
 }
