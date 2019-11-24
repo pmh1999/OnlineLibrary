@@ -4,6 +4,7 @@
 }
 body{
     height: 2200px;
+    min-width: 100%;
     min-height:100%; padding:0; margin:0; position:relative;
 }
 .header{
@@ -101,4 +102,12 @@ button{
     font-size: small;
     padding-top: 4px;
     width: 100px;
+}
+
+.dropdown button{
+    font-size: small;
+    padding-top: 4px;
+    width: 100px;
+    margin-left: 10px;
+    margin-top:10px ;
 }
