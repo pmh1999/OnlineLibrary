@@ -1,7 +1,8 @@
 *{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px; 
 }
+
 body{
     height: 2200px;
     min-height:100%; padding:0; margin:0; position:relative;
@@ -42,7 +43,20 @@ body{
     background-size:cover;
     opacity: 0.5;
 }
-
+#searchIcon {
+    background: white !important;
+    border-left: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: 10px;
+  }
+  
+  #searchInput {
+    border-right: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin-top: 10px;
+  }
 #inputfind{
     width:50%;position: relative;left: 25%;
 }
@@ -101,4 +115,30 @@ button{
     font-size: small;
     padding-top: 4px;
     width: 100px;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  /* Style the active/current link */
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+.book{
+    border-style: ridge; 
+    padding: 10px; 
+    height: 180px;
+}
+
+.book .BookButton{
+    text-align: center;
 }
