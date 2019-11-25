@@ -5,6 +5,7 @@
 #refine{
     border-right-style: ridge;
     right: 10px;
+    padding-left: 40px;
 }
 body{
     height: 2200px;
@@ -89,7 +90,7 @@ body{
 .footer{
     position: absolute;
     bottom: 0;
-    background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%);     
+    background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%); 
     padding-top: 20px;
 }
 
