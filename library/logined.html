@@ -14,73 +14,18 @@
     <script src="script.js"></script>
 </head>
   <body>
-      <div class="header">
-            <div class="float-right" style="margin-right:10% ;">
-                <div class="row">                    
-                    <img src="./image/iconuser.jpg" alt="" style="border-radius: 100%; width: 50px; height: 50px;">      
-                <div class="dropdown">
-                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Hiếu Phạm
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>  
-                </div>      
-            </div>
-         <div class="container">
-               
-              <nav class="navbar navbar-expand-sm navbar-dark">
-                  <img src="" alt="">
-                  <a class="navbar-brand" href="#" id="thuvien">
-                    <img src="./image/logo.png" class="float-left" style="margin-right:20px ;" id="logo" alt="">  
-                    Thư Viện <br> <p>University of Science</p></a>
-                  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                      aria-expanded="false" aria-label="Toggle navigation"></button>
-                  <div class="collapse navbar-collapse" id="collapsibleNavId">
-                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                          <li class="nav-item active">
-                              <a class="nav-link disabled" id="trangchu" href="#" >Trang Chủ <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dịch Vụ</a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                  <a class="dropdown-item" href="#">Mượn sách</a>
-                                  <a class="dropdown-item" href="#">Đăng ký phòng</a>
-                                  <a class="dropdown-item" href="#">Đăng ký tài khoản</a>
-                              </div>
-                          </li>
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Giới Thiệu</a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                  <a class="dropdown-item" href="#">Giới thiệu thư viện</a>
-                                  <a class="dropdown-item" href="#">Giới thiệu trường</a>
-                              </div>
-                          </li>
-                          <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" id="nav-item" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trợ Giúp</a>
-                              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                                  <a class="dropdown-item" href="#">Hướng dẫn sử dụng</a>
-                                  <a class="dropdown-item" href="#">Nội quy</a>
-                              </div>
-                          </li>
-                      </ul>               
-                  </div>
-              </nav>
-      </div>     
-      </div>
+    <div id="includedHeader"></div>
+
         
-      <div>
-        <div id="findInput"></div>
-        <div class="input-group mb-3" id="inputfind">
-            <input id="inputsach" type="text" class="form-control" placeholder="Sách cần tìm" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div id="findInput">
+        <div class="input-group">
+            <input type="text" placeholder="Sách cần tìm" id="searchInput">
             <div class="input-group-append">
-                <button class="btn btn-inline-secondary" type="button" id="button-addon2"><img src="./image/glass.png" id="iconglass" alt=""></button>
+              <a class="input-group-text" href="search.html" id="searchIcon">
+                <img src="image/glass.png" alt="" height="30px">
+              </a>
             </div>
-            </div>
-        </div>
+          </div>
      </div>
     
     <br>    
@@ -299,30 +244,19 @@
         </a>
         </div>
     </div>
-            <div class="container-fluid footer">
-                <div class="row">
-                    <div class="col-2" style="margin-left:12% ;">
-                        <h3>Giờ Mở</h3>
-                        <hr>
-                        <p>Thứ 2-Thứ 6: ??giờ - ??giờ</p>
-                        <p>Thứ 7&Chủ Nhật: Nghỉ</p>
-                    </div>
-                    <div class="col-2"style="margin-left:12% ;" >
-                            <h3>Phản hồi</h3>
-                            <hr>
-                            <p>Facebook</p>
-                            <p>Feedback</p>
-                            <p>FAQ</p>
-                    </div>
-                    <div class="col-3"style="margin-left:12% ;">
-                            <h3>Liên lạc</h3>
-                            <hr>
-                            <p>Đường dây nóng: (###-###-#####)</p>
-                            <p>Email: abc@hcmus.edu.vn</p>
-                            <p>Địa Chỉ: 217 Nguyễn Văn Cừ , Q5, TP.HCM</p>
-                    </div>
-                </div>
-            </div>
+    <div id="includeFooter"></div>
+    
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#includedHeader").load("./headerlogined.html");
+            $("#includeFooter").load("./footer.html");
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

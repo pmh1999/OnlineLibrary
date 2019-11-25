@@ -67,7 +67,9 @@ body{
     margin-top: 10px;
   }
 #inputfind{
-    width:50%;position: relative;left: 25%;
+    width:100%;position: relative;
+    background-color: brown;
+    padding: 10px 0 25px 0;
 }
 
 #nav-item{
@@ -161,7 +163,6 @@ button{
     height: 30px;
 }
 .input-group{
-    background-color: brown;
     padding: 10px 0 25px 0;
 }
 
