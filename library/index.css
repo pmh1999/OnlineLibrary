@@ -2,11 +2,7 @@
     font-family: 'Roboto Condensed', sans-serif;
         font-size: 20px; 
 }
-#refine{
-    border-right-style: ridge;
-    right: 10px;
-    padding-left: 40px;
-}
+
 body{
     height: 2200px;
     min-width: 100%;
@@ -68,9 +64,7 @@ body{
     margin-top: 10px;
   }
 #inputfind{
-    width:100%;position: relative;
-    background-color: brown;
-    padding: 10px 0 25px 0;
+    width:50%;position: relative;left: 25%;
 }
 
 #nav-item{
@@ -90,7 +84,7 @@ body{
 .footer{
     position: absolute;
     bottom: 0;
-    background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%); 
+    background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%);     
     padding-top: 20px;
 }
 
@@ -163,9 +157,7 @@ button{
 .book .BookButton .icon .cart{
     height: 30px;
 }
-.input-group{
-    padding: 10px 0 25px 0;
-}
+
 
 .input-group #advanceSearch{
     margin-top: 20px;
@@ -180,6 +172,7 @@ button{
     position: right;
     margin: 20px 0 0 60px;
 }
+
 .dropdown button{
     font-size: medium;
     margin-left:5px ;

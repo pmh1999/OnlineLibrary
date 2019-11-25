@@ -4,9 +4,9 @@ function checkPass()
     var username  = document.getElementById('username');
     var newUrl='./logined.html';
 
-    if(password.value == 'debovao'&&username.value=='tencc'){
+    if(password.value == 'admin'&&username.value=='admin'){
         history.pushState({}, null, newUrl);
     }else{
-        alert('sai r cho');
+        alert('Sai tai khoan hoac mat khau');
     }
-}  
+} 
