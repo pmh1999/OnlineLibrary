@@ -1,6 +1,6 @@
 *{
-    font-family: 'Cuprum', sans-serif;
-    font-size: 20px; 
+    font-family: 'Roboto Condensed', sans-serif;
+        font-size: 20px; 
 }
 
 body{
@@ -47,15 +47,20 @@ body{
 #searchIcon {
     background: white !important;
     border-left: none;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+
     margin-top: 10px;
   }
   
-  #searchInput {
+#searchInput {
+    width:70%;
+    position: relative;
+    margin-left: 20px;
     border-right: none;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
     margin-top: 10px;
   }
 #inputfind{
@@ -118,7 +123,6 @@ button{
     width: 100px;
 }
 
-<<<<<<< HEAD
 .pagination a {
     color: black;
     float: left;
@@ -140,15 +144,34 @@ button{
     padding: 10px; 
     height: 180px;
 }
+.body{
+    margin: 0;
+}
 
 .book .BookButton{
     text-align: center;
-=======
-.dropdown button{
-    font-size: small;
-    padding-top: 4px;
-    width: 100px;
-    margin-left: 10px;
-    margin-top:10px ;
->>>>>>> 4f1e207832fed7bb2ca1ce66aaf641b8938345d9
+}
+.book .BookButton .icon{
+    padding-top: 10px;
+}
+.book .BookButton .icon .cart{
+    height: 30px;
+}
+.input-group{
+    background-color: brown;
+    padding: 10px 0 25px 0;
+}
+
+.input-group #advanceSearch{
+    margin-top: 20px;
+    margin-left: 5px;
+    color: #ffffff;
+}
+
+
+.input-group #cart #cartImg{
+    height: 50px;
+    right: 0%;
+    position: right;
+    margin: 20px 0 0 60px;
 }
