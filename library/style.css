@@ -2,7 +2,10 @@
     font-family: 'Roboto Condensed', sans-serif;
         font-size: 20px; 
 }
-
+#refine{
+    border-right-style: ridge;
+    right: 10px;
+}
 body{
     height: 2200px;
     min-width: 100%;
