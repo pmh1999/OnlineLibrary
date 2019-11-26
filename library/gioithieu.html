@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Giới thiệu</title>
     <link rel="stylesheet" href="./gioithieu.css" type="text/css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+
 </head>
 <body>
+    <div id="includeHeader"></div>
+
     <div class="gtTruong">
         <h1 id="ttGioiThieu">TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN</h1>
         <p>&emsp; &emsp; Trường Đại học Khoa học Tự nhiên (ĐH KHTN) thuộc Đại học Quốc gia Thành phố Hồ Chí Minh  (ĐHQG-HCM), đã được thành lập trên 60 năm. Trường hiện có 09 Khoa: Toán-Tin học, Công nghệ Thông tin, Vật lý-Vật lý Kỹ thuật, Hóa học, Sinh học, Địa chất, Điện tử-Viễn thông, Môi trường, Khoa học Vật liệu, đào tạo 15 ngành (52 chuyên ngành) bậc đại học và 32 chuyên ngành bậc sau đại học.</p>
@@ -34,6 +39,12 @@
 </body>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+            $(function () {
+                $("#includeHeader").load("./header.html");
+                $("#includeFooter").load("./footer.html");
+            });
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
