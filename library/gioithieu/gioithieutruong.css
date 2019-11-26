@@ -13,3 +13,43 @@
 .gtTruong{
     margin: 100px 300px;
 }
+
+#logo{
+    height: 70px;
+    width: 90px;
+    margin-left: 10%;
+}
+
+#thuvien{
+    color: #DCA333;
+    font-size: 30px; 
+    font-weight: bold;
+}
+#thuvien p{
+    color: #DCA333;
+    font-size: 15px; 
+}
+#trangchu{
+    margin-left: 50px;
+    color: red; 
+}
+.header{
+    padding: 10px;
+    background-image: linear-gradient(#73E2E9 90%, rgb(0, 157, 248));     
+}
+*{
+    font-family: 'Roboto Condensed', sans-serif;
+        font-size: 20px; 
+}
+#nav-item{
+    color: black;
+    margin-left: 20px;
+}
+.form-inline input,button{
+    width: 150px; height: 30px;
+}
+.form-inline button{
+    font-size: small;
+    padding-top: 4px;
+    width: 100px;
+}
