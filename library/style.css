@@ -23,11 +23,6 @@ body{
     margin-left: 10%;
 }
 
-#flaga,#flagv{
-    height: 30px;
-    width: 30px;  
-}
-
 #thuvien{
     color: #DCA333;
     font-size: 30px; 
@@ -169,7 +164,7 @@ button{
 
 .input-group #advanceSearch{
     margin-top: 20px;
-    margin-left: 5px;
+    margin-left: 20px;
     color: #ffffff;
 }
 
