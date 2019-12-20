@@ -7,6 +7,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Borrow.associate = function(models) {
     // associations can be defined here
+    Borrow.belongsTo(models.User, {foreignKey: 'userId'});
+    Borrow.belongsTo(models.BookInfo, {foreignKey: 'bookId'});
   };
   return Borrow;
 };
