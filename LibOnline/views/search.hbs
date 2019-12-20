@@ -1,0 +1,234 @@
+<div class="input-group" id = "inputfind">
+        <input type="text" placeholder="Sách cần tìm" id="searchInput">
+        <div class="input-group-append">
+            <a class="input-group-text" href="/search" id="searchIcon">
+            <img src="/img/glass.png" alt="" height="30px">
+            </a>
+        </div>
+        <div id="advanceSearch">
+            <h4>Tìm nâng cao</h4>
+        </div>
+        <a id = "cart" href="/giohang">
+            <img id="cartImg"src="/img/giohang.png" alt="">
+        </div>
+        </div>
+
+        <p></p>
+<div class="container-fluid body">
+    <div class="row">
+        <div class="col-3"   id = "refine">
+            <div class="accordion">
+                <h3>Lọc kết quả</h3>
+
+                        <a data-toggle="collapse" href="#collapseYear">
+                            Năm xuất bản
+                        </a>
+                    <div id="collapseYear" class="collapse">
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                            <label class="custom-control-label" for="customCheck">1995</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck2" name="example2">
+                            <label class="custom-control-label" for="customCheck2">2000</label>
+                        </div>
+
+                </div>
+                <div>
+        
+                    <a data-toggle="collapse" href="#collapseCate">
+                        Thể loại
+                    </a>
+
+                    <div id="collapseCate" class="collapse">
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck3" name="example1">
+                            <label class="custom-control-label" for="customCheck3">Khoa học</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck4" name="example2">
+                            <label class="custom-control-label" for="customCheck4">Sách giáo khoa</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+        
+                        <a data-toggle="collapse" href="#collapseAuthor">
+                        Tác giả
+                        </a>
+        
+                    <div id="collapseAuthor" class="collapse">
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck5" name="example1">
+                            <label class="custom-control-label" for="customCheck5">Nguyễn Văn A</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mb-3">
+                            <input type="checkbox" class="custom-control-input" id="customCheck6" name="example2">
+                            <label class="custom-control-label" for="customCheck6">Phạm Văn B</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button>Lọc</button>
+            </div>
+        </div>
+        <div class ="col-9">
+            <div class="searchresult">
+                <p>8 trong 100 kết quả</p>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                        </a>  
+                        <div class = "col">
+                        <h4>Book 1</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                            <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                            <p>Thêm vào giỏ</p>
+                            <a href="./datlich.html"><img class = "cart" src="/img/muonsachicon.png" alt=""></a>
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                    <a href="/bookdetail">
+                    <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                    </a>
+                    <div class = "col">
+                        <h4>Book 2</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                                <a href="./datlich.html"><img class = "cart" src="/img/muonsachicon.png" alt=""></a>
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                            </a>                            <div class = "col">
+                        <h4>Book 3</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="">
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                            </a>
+                        <div class = "col">
+                        <h4>Book 4</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="">
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                        </a>                            
+                        <div class = "col">
+                        <h4>Book 5</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="">
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                        </a>                              <div class = "col">
+                        <h4>Book 6</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="">
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                        </a>                              <div class = "col">
+                        <h4>Book 7</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="" >
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row book">
+                        <a href="/bookdetail">
+                            <img src="/img/book1.jfif" alt="" style="height: 150px;">                     
+                        </a>                              <div class = "col">
+                        <h4>Book 8</h4>
+                        <p>Tác giả: Nguyễn Văn A</p>
+                        <p>Số lượng còn lại: 1</p>                               
+                    </div>
+                    <div class="d-flex justify-content-end mb-3 BookButton">
+                        <div class="col icon">
+                                <img class = "cart" onclick="addCart()" src="/img/giohang.png" alt="">
+                                <p>Thêm vào giỏ</p>
+                            <img class = "cart" src="/img/muonsachicon.png" alt="">
+                            <p>Mượn sách</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            <div class="pagination" style="align-content: center;">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a class="active" href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+        </div>                
+    </div>
+</div>
