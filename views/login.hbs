@@ -18,6 +18,11 @@
                 <div class="signup-content">
                     <form method="POST" id="signup-form" class="signup-form">
                         <h2 class="form-title">Log in</h2>
+                        {{#if message}}
+                        <div class="form-group">
+                            <strong class="alert {{type}}">{{message}}</strong>
+                        </div>
+                        {{/if}}
                         <div class="form-group">
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
                         </div>
