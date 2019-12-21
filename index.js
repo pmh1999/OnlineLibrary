@@ -29,15 +29,8 @@ app.get('/sync', (req, res) =>{
 });
 
 app.get('/:page', (req, res) => {
-    let banners = {
-        giohang: 'Giỏ hàng',
-        search: 'Search',
-        gioithieutruong: 'Giới thiệu trường',
-        bookdetail: 'Book detail',
-
-    }
     let page = req.params.page;
-    res.render(page, {banner: banners[page]});
+    res.render(page, {});
 });
 
 //Set server port & start server
