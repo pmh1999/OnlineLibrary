@@ -19,6 +19,7 @@ app.set('view engine', 'hbs');
 app.get('/', require('./router/indexRouter'));
 
 app.use('/books',require('./router/bookRouter'));
+app.use('/users', require('./router/userRouter'));
 
 app.get('/sync', (req, res) =>{
     let models = require('./models');
