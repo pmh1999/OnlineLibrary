@@ -16,9 +16,9 @@ app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
 //Define your routes here 
-app.get('/', (req, res) => {
-    res.render('index');
-});
+app.get('/', require('./router/indexRouter'));
+
+app.use('/books',require('./router/bookRouter'));
 
 app.get('/sync', (req, res) =>{
     let models = require('./models');
@@ -34,6 +34,7 @@ app.get('/:page', (req, res) => {
         search: 'Search',
         gioithieutruong: 'Giới thiệu trường',
         bookdetail: 'Book detail',
+
     }
     let page = req.params.page;
     res.render(page, {banner: banners[page]});

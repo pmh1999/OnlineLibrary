@@ -1,6 +1,6 @@
 *{
     font-family: 'Roboto Condensed', sans-serif;
-        font-size: 20px; 
+     font-size: 20px; 
 }
 #refine{
     border-right-style: ridge;
@@ -83,7 +83,6 @@ body{
     width: 30px;
 }
 .footer{
-    position: absolute;
     bottom: 0;
     background-image: linear-gradient(rgb(0, 157, 248),#73E2E9 10%); 
     padding-top: 20px;
@@ -107,13 +106,16 @@ button{
     text-align: center;
 }
 
-.carousel-control-next-icon{
-    width: 60px;
+#preNextButton .carousel-control-next-icon{
+    width: 30px;
     height: 60px;
+    border-radius: 100%;
 }
-.carousel-control-prev-icon{
-    width: 60px;
+#preNextButton .carousel-control-prev-icon{
+    width: 30px;
     height: 60px;
+    border-radius: 100%;
+
 }
 .form-inline input,button{
     width: 150px; height: 30px;

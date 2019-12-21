@@ -15,8 +15,10 @@
         </div>
         <div class="col">
             <ul>
-                <h4>Title:  PROPHECY.</h4>
-                <li>Alternate Form of Title:    Novel</li>
+                {{#with book}}
+                <h4>{{title}}</h4>
+                <li>ISBN:  {{isbn}}</li>
+                <li>Alternate Form of Title: NONE</li>
                 <li>Subjects:   Fiction -- History and criticism -- Periodicals</li>
                 <li>Additional Subjects (All):  Roman -- Histoire et critique -- Périodiques; Fiction; Fictie; Engels; Amerikaans; Critique littéraire; Roman; Théorie littéraire</li>
                 <li>Genre/Form:  Criticism, interpretation, etc</li>
@@ -25,6 +27,7 @@
                 <li>Dates of Publication:   V. 1- fall 1967</li>
                 <li>Format: volumes ; 23 cm</li>
                 <li>Language:   English</li>
+                {{/with}}
             </ul>
         </div>
     </div>

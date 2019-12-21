@@ -1,0 +1,22 @@
+
+<div class="row">
+  <div class="col">
+    <div class="listBook">
+        {{#each book}}
+        <div class="row" id="coverBook">
+          <div class="col-3" id="book">
+            <img class="imgBook" src="/img/1.jpg" alt="">
+          </div>
+          <div class="col" id='text'>
+            <p>Tên sách: {{title}}</p>
+            <p>ISBN: {{isbn}}</p>
+            <p>Năm xuất bản: 1990</p>
+            <p>Đánh giá: <span style="color:yellow">&#9733; &#9733; &#9733;</span> &#9734; &#9734;</p>
+            <p>Nội dung: Cuốn sách nói về lorem lorem lorem lorem lorem [...]</p>
+            <p>Số lượng: 10</p>
+          </div>
+        </div>
+        {{/each}}
+    </div>
+  </div>
+</div>
