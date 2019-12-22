@@ -1,10 +1,11 @@
 let express = require('express');
 let router = express.Router();
 
-router.get('/',(req,res)=>{
+router.get('/',(req,res,next)=>{
     let bookcontroller=require('../controllers/bookcontroller');
     bookcontroller
         .getAll()
+
         .then(data =>{
             res.locals.book =data;
             res.render('books')

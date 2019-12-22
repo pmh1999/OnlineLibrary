@@ -11,11 +11,12 @@
 <div class="container">
     <div class="row">
         <div class="col-5" id="sachchitiet" >
-            <img src="/img/3.jpg" alt="sach">
+             {{#with book}}
+            <img src={{imagePath}} alt="sach">
         </div>
         <div class="col">
             <ul>
-                {{#with book}}
+               
                 <h4>{{title}}</h4>
                 <li>ISBN:  {{isbn}}</li>
                 <li>Thể loại:   {{category}}</li>
