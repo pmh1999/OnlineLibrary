@@ -1,6 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let userController = require('../controllers/userController');
+let bcrypt = require("bcryptjs");
 
 router.get('/login', (req, res) =>{
     res.render('login');
@@ -12,7 +13,7 @@ router.get('/signup', (req, res) =>{
 
 router.post('/signup', (req, res, next) =>{
     let fullname = req.body.fullname;
-    let email = req.body.username;
+    let username = req.body.username;
     let password = req.body.password;
     let confirmPassword = req.body.confirmPassword;
     let keepLoggedIn = (req.body.keepLoggedIn != undefined);
@@ -26,18 +27,18 @@ router.post('/signup', (req, res, next) =>{
     }
     // Kiem tra username chua ton tai
     userController
-        .getUserByEmail(email)
+        .getUserByEmail(username)
         .then(user =>{
             if (user){
                 return res.render('signup', {
-                    message: `Email ${email} exists! Please choose another email address.`,
+                    message: `Email ${username} exists! Please choose another email address.`,
                     type: 'alert-danger'
                 });
             }
             // Tao tai khoan
             user = {
                 fullname,
-                username: email,
+                username: username,
                 password
             };
 

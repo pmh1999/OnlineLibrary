@@ -3,9 +3,9 @@ let models = require('../models');
 let User = models.User;
 let bcrypt = require('bcryptjs');
 
-controller.getUserByEmail = (email) => {
+controller.getUserByEmail = (username) => {
     return User.findOne({
-        where: { username: email }
+        where: { username: username }
     });
 };
 
