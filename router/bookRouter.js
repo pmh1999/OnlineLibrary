@@ -20,9 +20,10 @@ router.get('/:id',(req,res,next)=>{
         .then(data =>{
             res.locals.book =data;
             res.render('bookdetail')
-            
         })
         .catch(error=>{next(error);})
 });
+
+
 
 module.exports = router;

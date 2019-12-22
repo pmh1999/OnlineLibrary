@@ -1,6 +1,21 @@
 var models = require("../models");
 var controller = {};
 let BookInfo= models.BookInfo;
+let BookCategory = models.BookCategory;
+
+controller.getAllCateIdByBookId= (id) =>{
+    return new Promise((resovle,reject)=>{
+        let options ={
+            where:{
+                id:id
+            }
+        }
+        BookCategory
+            .findAll(options)
+            .then(data =>resovle(data))
+            .catch(error => reject(new Error(error)));
+    });
+};
 
 controller.getById= (id)=>{
     return new Promise((resovle,reject)=>{

@@ -8,7 +8,7 @@ module.exports = {
     {name: "Thesis", imagePath: "/public/img/6.jpg"},
     {name: "Programing Language", imagePath: "/public/img/4.jpg"},
     {name: "Science fiction", imagePath: "/public/img/1.jpg"},
-    {name: "Math", imagePath: "/public/img/2.jpg"}];
+    {name: "Algorithm", imagePath: "/public/img/2.jpg"}];
     
     data.map(item =>{
       item.createdAt = Sequelize.literal('NOW()');
