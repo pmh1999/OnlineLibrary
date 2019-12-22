@@ -1,11 +1,11 @@
 <main class="site-main">
 
 <div id="findInput" >
-    <form action="/books" method="GET">
+    <form action="/books" id="searchBookIndex" method="GET">
 <div class="input-group">
     <input type="text" placeholder="Sách cần tìm" name="search" id="searchInput" >
     <div class="input-group-append">
-        <a class="input-group-text" href="/search" id="searchIcon">
+        <a class="input-group-text" onclick="document.getElementById('searchBookIndex').submit();" id="searchIcon">
         <img type="submit" src="/img/glass.png" alt="" height="30px" >
         </a>
     </div>
@@ -29,7 +29,7 @@
             </div> 
         </div>
         <div class="col-3">
-            <a href="/bookdetail">
+            <a href="/books">
             <div class="alert alert-primary" >
                     <div class="bd-example">
                         <div id="caption" class="carousel slide" data-ride="carousel">
@@ -209,6 +209,7 @@
 
     $('#sort').val(urlParams.get('sort'));
     $('#limit').val(urlParams.get('limit'));
+
 
     function selectParam(key, value, reset = false){
       if (reset){
