@@ -187,14 +187,9 @@ button{
 }
 
 /*======== page giỏ hàng =========*/
-#hGioHang{
-    margin-left: 100px;
-}
 
-.listBook{
-    margin-top: 50px;
-    margin-left: 100px;
-    margin-right: 50px;
+#text{
+    margin-left:50px;
 }
 
 #coverBook{
@@ -214,8 +209,6 @@ button{
 
 .pgNum{
     text-align: center;
-    margin-left: 100px;
-    margin-right: 300px;
 }
 
 a.pg{
@@ -253,7 +246,6 @@ a.pgThis{
 }
 
 a:hover {
-    background-color: #2b9799;
     color: black;
 }
 a {
