@@ -6,7 +6,7 @@ router.get('/',(req,res)=>{
     bookcontroller
         .getNew(0)
         .then(data =>{
-            res.locals.book =data;
+            res.locals.book = data;
             return bookcontroller.getNew(1);
             
         })

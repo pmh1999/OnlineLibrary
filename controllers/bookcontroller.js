@@ -1,21 +1,6 @@
 var models = require("../models");
 var controller = {};
 let BookInfo= models.BookInfo;
-let BookCategory = models.BookCategory;
-
-controller.getAllCateIdByBookId= (id) =>{
-    return new Promise((resovle,reject)=>{
-        let options ={
-            where:{
-                id:id
-            }
-        }
-        BookCategory
-            .findAll(options)
-            .then(data =>resovle(data))
-            .catch(error => reject(new Error(error)));
-    });
-};
 
 controller.getById= (id)=>{
     return new Promise((resovle,reject)=>{
@@ -26,6 +11,20 @@ controller.getById= (id)=>{
         }
         BookInfo
             .findOne(options)
+            .then(data =>resovle(data))
+            .catch(error => reject(new Error(error)));
+    });
+};
+
+controller.getByCate= (category)=>{
+    return new Promise((resovle,reject)=>{
+        let options ={
+            where:{
+                category:category
+            }
+        }
+        BookInfo
+            .findAll(options)
             .then(data =>resovle(data))
             .catch(error => reject(new Error(error)));
     });
@@ -42,6 +41,7 @@ controller.getAll= ()=>{
             .catch(error => reject(new Error(error)));
     });
 };
+
 
 controller.getNew= (id)=>{
     return new Promise((resovle,reject)=>{
