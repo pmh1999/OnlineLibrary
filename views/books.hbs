@@ -86,13 +86,13 @@
         {{#each book}}
         <div class="row" id="coverBook">
           <div class="col-3" id="book">
-            <img class="imgBook" src="/img/1.jpg" alt="">
+            <img class="imgBook" src={{thumbnailPath}} alt="">
           </div>
           <div class="col" id='text'>
             <p>Tên sách: {{title}}</p>
             <p>ISBN: {{isbn}}</p>
-            <p>Thể loại: </p>
-            <p>Tác giả: </p>
+            <p>Thể loại: {{category}}</p>
+            <p>Tác giả: {{author}}</p>
             <p>Ngôn ngữ: {{language}}</p>
             <p>Nhà xuất bản: {{publisher}}</p>
             <p>Năm xuất bản: {{publishYear}}</p>
