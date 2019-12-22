@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+let paginateHelper = require('express-handlebars-paginate');
 
 //Set public static folder
 app.use(express.static(__dirname + '/public'));
@@ -10,7 +11,11 @@ let hbs = expressHbs.create({
     extname: 'hbs',
     defaultLayout: 'layout',
     layoutsDir: __dirname + '/views/layouts/',
-    partialsDir: __dirname + '/views/partials/'
+    partialsDir: __dirname + '/views/partials/',
+    helpers: {
+        createPagination: paginateHelper.createPagination, 
+        
+    }
 });
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

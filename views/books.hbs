@@ -58,14 +58,14 @@
           <!-- Start Filter Bar -->
           <div class="filter-bar d-flex flex-wrap align-items-center">
             <div class="sorting">
-              <select onchange="selectParam('sort', this.value)">
+              <select id="sort" onchange="selectParam('sort', this.value)">
                 <option value="title">Tăng dần theo tên</option>
-                <option value="amount">Tăng dần theo số lượn</option>
-                <option value="defautl">Mặc định</option>
+                <option value="amount">Tăng dần theo số lượng</option>
+                <option value="default">Mặc định</option>
               </select>
             </div>
-            <div class="sorting mr-auto">
-              <select onchange="selectParam('limit', this.value)">
+            <div  class="sorting mr-auto">
+              <select id="limit" onchange="selectParam('limit', this.value)">
                 <option value="9">Show 9</option>
                 <option value="18">Show 18</option>
                 <option value="36">Show 36</option>
@@ -73,10 +73,12 @@
             </div>
             <div>
               <div class="input-group filter-bar-search">
-                <input type="text" placeholder="Search">
+                <form action="/books" method="GET">
+                <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
-                  <button type="button"><i class="ti-search"></i></button>
+                  <button type="submit"><i class="ti-search"></i></button>
                 </div>
+                </form>
               </div>
             </div>
           </div>
@@ -86,7 +88,7 @@
         {{#each book}}
         <div class="row" id="coverBook">
           <div class="col-3" id="book">
-            <img class="imgBook" src={{thumbnailPath}} alt="">
+            <a href="/books/{{id}}"><img class="imgBook" src={{thumbnailPath}} alt=""></a>
           </div>
           <div class="col" id='text'>
             <p>Tên sách: {{title}}</p>
@@ -102,14 +104,15 @@
         </div>
         {{/each}}
     </div>
-          <!-- End Best Seller -->
+              <div class="row justify-content-center">{{{ createPagination pagination leftText="Prev" rightText="Next" paginationClass="pagination"}}}</div>
+
         </div>
       </div>
     </div>
   </section>
 	<!-- ================ category section end ================= -->		  
 
-<script src="/vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="/vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="/vendors/skrollr.min.js"></script>
   <script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
@@ -117,3 +120,34 @@
   <script src="/vendors/jquery.ajaxchimp.min.js"></script>
   <script src="/vendors/mail-script.js"></script>
   <script src="/js/main.js"></script>
+
+  <script>
+    let urlParams = new URLSearchParams(location.search);
+    let params = {
+      limit: 9,
+      sort: 'title',
+      search: '',
+      page: 1
+    }
+
+    for (let key in params){
+      if (!urlParams.has(key)){
+        urlParams.append(key, params[key]);
+      }
+    }
+
+    $('#sort').val(urlParams.get('sort'));
+    $('#limit').val(urlParams.get('limit'));
+
+    function selectParam(key, value, reset = false){
+      if (reset){
+        for (let key in params){
+          urlParams.set(key, params[key]);
+        }
+      }
+
+      urlParams.set(key, value);
+      let url = `/books?${urlParams.toString()}`;
+      location.href = url;
+    }
+  </script>

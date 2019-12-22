@@ -35,6 +35,7 @@ controller.getById= (id)=>{
 controller.getAll= (query)=>{
     return new Promise((resovle,reject)=>{
         let options ={
+            
         };
 
         if (query.limit > 0){

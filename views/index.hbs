@@ -1,14 +1,16 @@
 <main class="site-main">
 
 <div id="findInput" >
+    <form action="/books" method="GET">
 <div class="input-group">
-    <input type="text" placeholder="Sách cần tìm" id="searchInput" >
+    <input type="text" placeholder="Sách cần tìm" name="search" id="searchInput" >
     <div class="input-group-append">
         <a class="input-group-text" href="/search" id="searchIcon">
-        <img src="/img/glass.png" alt="" height="30px" >
+        <img type="submit" src="/img/glass.png" alt="" height="30px" >
         </a>
     </div>
     </div>
+    </form>
 </div>
     
 <br>    
@@ -189,3 +191,34 @@
 </div>
 
 </main>
+
+  <script>
+    let urlParams = new URLSearchParams(location.search);
+    let params = {
+      limit: 9,
+      sort: 'title',
+      search: '',
+      page: 1
+    }
+
+    for (let key in params){
+      if (!urlParams.has(key)){
+        urlParams.append(key, params[key]);
+      }
+    }
+
+    $('#sort').val(urlParams.get('sort'));
+    $('#limit').val(urlParams.get('limit'));
+
+    function selectParam(key, value, reset = false){
+      if (reset){
+        for (let key in params){
+          urlParams.set(key, params[key]);
+        }
+      }
+
+      urlParams.set(key, value);
+      let url = `/books?${urlParams.toString()}`;
+      location.href = url;
+    }
+  </script>

@@ -31,12 +31,43 @@ controller.getByCate= (category)=>{
 };
 
 
-controller.getAll= ()=>{
+controller.getAll= (query)=>{
     return new Promise((resovle,reject)=>{
-        let options ={
+        let = options ={
+            where: {}
+        };
+
+ 
+
+        if (query.limit > 0){
+            options.limit = query.limit;
+            options.offset = query.limit * (query.page - 1);
         }
+        var Sequelize = require('sequelize');
+        if (query.search != ''){
+            options.where.title = {
+                [Sequelize.Op.iLike]: `%${query.search}%`
+            }
+        }
+
+        if (query.sort){
+            switch (query.sort){
+                case 'title':
+                    options.order = [['title', 'ASC']];
+                    break;
+                case 'amount':
+                    options.order = [['amount', 'ASC']];
+                    break;
+                default:
+                    options.order = [['title', 'ASC']];
+                    break;
+            }
+        }
+
+        
+
         BookInfo
-            .findAll(options)
+            .findAndCountAll(options)
             .then(data =>resovle(data))
             .catch(error => reject(new Error(error)));
     });
