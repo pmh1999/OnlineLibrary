@@ -140,12 +140,12 @@ body {
   background-image: url("/img/backgroundtruong.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  -moz-background-size: cover;
+  
   -webkit-background-size: cover;
   -o-background-size: cover;
   -ms-background-size: cover;
   background-position: center center;
-  padding: 115px 0; }
+}
 
 .container {
   width: 660px;
