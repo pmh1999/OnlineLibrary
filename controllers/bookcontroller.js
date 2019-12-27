@@ -45,9 +45,27 @@ controller.getAll= (query)=>{
         }
         var Sequelize = require('sequelize');
         if (query.search != ''){
-            options.where.title = {
-                [Sequelize.Op.iLike]: `%${query.search}%`
-            }
+            options.where = {
+                [Sequelize.Op.or]:[
+                    {
+                        title : {
+                            [Sequelize.Op.iLike] : `%${query.search}%`
+                        }
+                    }
+                ]
+            } 
+        }
+
+        if(query.type !=''){
+            options.where = {
+                [Sequelize.Op.or]:[
+                    {
+                        category : {
+                            [Sequelize.Op.iLike] : `%${query.type}%`
+                        }
+                    }
+                ]
+            } 
         }
 
         if (query.sort){

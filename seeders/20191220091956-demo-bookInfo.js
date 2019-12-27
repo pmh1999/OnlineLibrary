@@ -32,7 +32,7 @@ module.exports = {
     }, {
       "isbn": "608382949-6",
       "title": "Bizarre",
-      "category": "Blane Ardern",
+      "category": "Programming",
       "author": "Elsinore Chartre",
       "publisher": "Hayes Group",
       "publishYear": 1993,
@@ -45,7 +45,7 @@ module.exports = {
     }, {
       "isbn": "250028625-8",
       "title": "Traffic (Trafic)",
-      "category": "Cougar",
+      "category": "Programming",
       "author": "Washington Eales",
       "publisher": "Wisozk, Yost and Reichert",
       "publishYear": 1970,
@@ -58,7 +58,7 @@ module.exports = {
     }, {
       "isbn": "774790254-9",
       "title": "Innocent Lies",
-      "category": "SL-Class",
+      "category": "Thesis",
       "author": "Sallee Bardwell",
       "publisher": "Bogisich, Emard and Koch",
       "publishYear": 1991,
@@ -71,7 +71,7 @@ module.exports = {
     }, {
       "isbn": "666109040-5",
       "title": "A Merry Friggin' Christmas",
-      "category": "Science",
+      "category": "Thesis",
       "author": "Blane Ardern",
       "publisher": "Leuschke-Schaden",
       "publishYear": 1996,
@@ -84,7 +84,7 @@ module.exports = {
     }, {
       "isbn": "738943207-1",
       "title": "To the Limit (Am Limit)",
-      "category": "Science",
+      "category": "Programming",
       "author": "Natalya Abbiss",
       "publisher": "Connelly-Dare",
       "publishYear": 2005,
@@ -149,7 +149,7 @@ module.exports = {
     }, {
       "isbn": "259091611-6",
       "title": "River's Edge",
-      "category": "Suburban 2500",
+      "category": "Science fiction",
       "author": "Saxe Mouser",
       "publisher": "Kertzmann LLC",
       "publishYear": 2001,
@@ -162,7 +162,7 @@ module.exports = {
     }, {
       "isbn": "395111759-1",
       "title": "Lo",
-      "category": "Science",
+      "category": "Lesson plan",
       "author": "Heda Bills",
       "publisher": "Vandervort Group",
       "publishYear": 1996,

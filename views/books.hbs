@@ -1,4 +1,3 @@
-<link rel="icon" href="/img/Fevicon.png" type="image/png">
   <link rel="stylesheet" href="/vendors/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="/vendors/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="/vendors/themify-icons/themify-icons.css">
@@ -19,12 +18,12 @@
               <li class="common-filter">
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand"><label for="men">Science<span> (3600)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="women" name="brand"><label for="women">Lesson Plan<span> (3600)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories" name="brand"><label for="accessories">Thesis<span> (3600)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="footwear" name="brand"><label for="footwear">Programming<span> (3600)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="bayItem" name="brand"><label for="bayItem">Science fiction<span> (3600)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="electronics" name="brand"><label for="electronics">Algorithm<span> (3600)</span></label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science" onclick="selectParam('type',this.id)" name="type"><label for="Science">Science</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Lesson Plan" onclick="selectParam('type',this.id)" name="type"><label for="Lesson Plan">Lesson Plan</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Thesis" onclick="selectParam('type',this.id)" name="type"><label for="Thesis">Thesis</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Programming" onclick="selectParam('type',this.id)" name="type"><label for="Programming">Programming</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science fiction" onclick="selectParam('type',this.id)" name="type"><label for="Science fiction">Science fiction</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Algorithm" onclick="selectParam('type',this.id)" name="type"><label for="Algorithm">Algorithm</label></li>
                   </ul>
                 </form>
               </li>
@@ -119,7 +118,6 @@
   <script src="/vendors/nice-select/jquery.nice-select.min.js"></script>
   <script src="/vendors/jquery.ajaxchimp.min.js"></script>
   <script src="/vendors/mail-script.js"></script>
-  <script src="/js/main.js"></script>
 
   <script>
     let urlParams = new URLSearchParams(location.search);
@@ -127,9 +125,10 @@
       limit: 9,
       sort: 'title',
       search: '',
-      page: 1
+      page: 1,
+      type:''
     }
-
+    
     for (let key in params){
       if (!urlParams.has(key)){
         urlParams.append(key, params[key]);

@@ -13,6 +13,10 @@ router.get('/',(req,res,next)=>{
     if ((req.query.search == null) || (req.query.search.trim() == '')) {
         req.query.search = '';
     }
+
+    if ((req.query.type == null) || (req.query.type.trim() == '')) {
+        req.query.type = '';
+    }
     
     if ((req.query.page == null) || isNaN(req.query.page)){
         req.query.page = 1;
