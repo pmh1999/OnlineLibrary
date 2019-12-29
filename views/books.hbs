@@ -71,14 +71,14 @@
               </select>
             </div>
             <div>
-              <div class="input-group filter-bar-search">
-                <form action="/books" method="GET">
-                <input type="text" name="search" placeholder="Search">
-                <div class="input-group-append">
-                  <button type="submit"><i class="ti-search"></i></button>
+              <form action="/books" method="GET"></form>
+                <div class="input-group filter-bar-search">
+                  <input type="text" name="search" placeholder="Search">
+                  <div class="input-group-append">
+                    <button type="submit"><i class="ti-search"></i></button>
+                  </div>
                 </div>
-                </form>
-              </div>
+              </form>
             </div>
           </div>
           <!-- End Filter Bar -->
@@ -100,6 +100,7 @@
             <p>Nội dung: {{description}}</p>
             <p>Số lượng: {{amount}}</p>
           </div>
+          <button class="add-to-cart" data-id="{{id}}"><i class="ti-shopping-cart"></i></button c></<button>
         </div>
         {{/each}}
     </div>
