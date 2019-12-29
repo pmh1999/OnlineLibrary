@@ -5,7 +5,20 @@
                 <form class="form-inline">
                 <a href="/cart"> <img src="/img/cart.png" alt="" id="icongiohang"  style="width: 40px; height: 40px;"><span class="nav-shop__circle" id="cart-badge">{{totalQuantity}}</span> </a>
                 
+                {{#if isLoggedIn}}
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Hiếu Phạm
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="info.html">Xem thông tin</a>
+                    <a class="dropdown-item" href="#">Đổi mật khẩu(chưa sử dụng được)</a>
+                    <a class="dropdown-item" href="/users/logout">Đăng xuất</a>
+                    </div>
+                </div>                 
+                {{else}}
                 <a class="btn btn-primary mb-2" href="/users/login">Đăng nhập</a>
+                {{/if}}
                 </form>                
         </div>
          <div class="container">

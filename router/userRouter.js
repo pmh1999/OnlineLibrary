@@ -95,4 +95,12 @@ router.post('/signup', (req, res, next) =>{
         .catch(error => next(error));;
 });
 
+router.get('/logout', (req, res, next) => {
+    req.session.destroy(error => {
+        if (error) {
+            return renext(error);
+        }
+        return res.render('login');
+    })
+});
 module.exports = router;
