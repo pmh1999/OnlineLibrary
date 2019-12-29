@@ -8,29 +8,26 @@ router.get('/login', (req, res) =>{
 });
 
 router.get('/login', (req, res, next) =>{
-    let email = req.body.username;
+    let username = req.body.username;
     let password = req.body.password;
     userController
-        .getUserByEmail(email)
+        .getUserByEmail(username)
         .then(user => {
             if (user) {
-                userController
-                    .comparePassword(password, user.password)
-                    .then(isMatch => {
-                        if (isMatch) { // nếu đăng nhập thành công
-                            req.session.user = user;
-                            res.render('/')
-                        }
-                        res.render('login', {
-                            message: 'Incorrect password!',
-                            type: 'alert-danger'
-                        })
+                if (userController.comparePassword(password, user.password)) {
+                    req.session.user = user;
+                    res.redirect('/');
+                } else {
+                    res.render('login', {
+                        message: 'Incorrect password!',
+                        type: 'alert-danger'
                     });
+                }
             } else {
-            res.render('login', {
-                message: 'Email does not exist!',
-                type: 'alert-danger'
-            });
+                res.render('login', {
+                    message: 'Email does not exist!',
+                    type: 'alert-danger'
+                });
         }
         })
 });
@@ -83,7 +80,7 @@ router.post('/signup', (req, res, next) =>{
                 .then(user => {
                     if (keepLoggedIn){
                         req.session.user = user;
-                        res.render('/');
+                        res.redirect('/');
                     } else{
                         res.render('login', {
                             message: 'You have registered, now please log in!',
@@ -100,7 +97,7 @@ router.get('/logout', (req, res, next) => {
         if (error) {
             return renext(error);
         }
-        return res.render('login');
+        return res.redirect('login');
     })
 });
 module.exports = router;
