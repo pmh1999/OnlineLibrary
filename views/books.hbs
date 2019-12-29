@@ -18,12 +18,12 @@
               <li class="common-filter">
                 <form action="#">
                   <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science" onclick="selectParam('type',this.id)" name="type"><label for="Science">Science</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Lesson Plan" onclick="selectParam('type',this.id)" name="type"><label for="Lesson Plan">Lesson Plan</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Thesis" onclick="selectParam('type',this.id)" name="type"><label for="Thesis">Thesis</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Programming" onclick="selectParam('type',this.id)" name="type"><label for="Programming">Programming</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science fiction" onclick="selectParam('type',this.id)" name="type"><label for="Science fiction">Science fiction</label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Algorithm" onclick="selectParam('type',this.id)" name="type"><label for="Algorithm">Algorithm</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science" onclick="selectParam('type',this.id)" name="Science"><label for="Science">Science</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Lesson Plan" onclick="selectParam('type',this.id)" name="Lesson Plan"><label for="Lesson Plan">Lesson Plan</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Thesis" onclick="selectParam('type',this.id)" name="Thesis"><label for="Thesis">Thesis</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Programming" onclick="selectParam('type',this.id)" name="Programming"><label for="Programming">Programming</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Science fiction" onclick="selectParam('type',this.id)" name="Science fiction"><label for="Science fiction">Science fiction</label></li>
+                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Algorithm" onclick="selectParam('type',this.id)" name="Algorithm"><label for="Algorithm">Algorithm</label></li>
                   </ul>
                 </form>
               </li>
@@ -122,24 +122,43 @@
 
   <script>
 
-    let urlParams = new URLSearchParams(location.search);
+     let urlParams = new URLSearchParams(location.search);
 
     let params = {
       limit: 9,
       sort: 'title',
       search: '',
       page: 1,
-      type:''
+      Science:0
     }
-    
     for (let key in params){
       if (!urlParams.has(key)){
         urlParams.append(key, params[key]);
       }
     }
 
-    $('#sort').val(urlParams.get('sort'));
-    $('#limit').val(urlParams.get('limit'));
+    $(document).ready(()=> {
+      
+      let checkboxes = ['Science','Lesson Plan','Thesis','Programming','Science fiction','Algorithm'];
+      for(let key of checkboxes)
+      {
+        let control = $(`#${key}${urlParams.get(key)}`);
+        if(control){
+          console.log(control);
+
+          $(control).prop('checked',true);
+        }
+      }
+      $('#sort').val(urlParams.get('sort'));
+      $('#limit').val(urlParams.get('limit'));  
+
+    });
+   
+    
+
+
+
+    
 
     function selectParam(key, value, reset = false){
       if (reset){

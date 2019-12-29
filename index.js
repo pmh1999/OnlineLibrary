@@ -54,7 +54,7 @@ app.use((req, res, next) => {
 app.get('/', require('./router/indexRouter'));
 
 app.use('/books', require('./router/bookRouter'));
-app.use('cart', require('./router/cartRouter'));
+app.use('/cart', require('./router/cartRouter'));
 app.use('/users', require('./router/userRouter'));
 
 app.get('/sync', (req, res) =>{
