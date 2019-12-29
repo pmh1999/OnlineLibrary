@@ -7,6 +7,34 @@ router.get('/login', (req, res) =>{
     res.render('login');
 });
 
+router.get('/login', (req, res, next) =>{
+    let email = req.body.username;
+    let password = req.body.password;
+    userController
+        .getUserByEmail(email)
+        .then(user => {
+            if (user) {
+                userController
+                    .comparePassword(password, user.password)
+                    .then(isMatch => {
+                        if (isMatch) { // nếu đăng nhập thành công
+                            req.session.user = user;
+                            res.render('/')
+                        }
+                        res.render('login', {
+                            message: 'Incorrect password!',
+                            type: 'alert-danger'
+                        })
+                    });
+            } else {
+            res.render('login', {
+                message: 'Email does not exist!',
+                type: 'alert-danger'
+            });
+        }
+        })
+});
+
 router.get('/signup', (req, res) =>{
     res.render('signup');
 });
@@ -17,6 +45,14 @@ router.post('/signup', (req, res, next) =>{
     let password = req.body.password;
     let confirmPassword = req.body.confirmPassword;
     let keepLoggedIn = (req.body.keepLoggedIn != undefined);
+
+    // Kiem tra confirm password va password giong nhau
+    if (fullname == "" || password == "" || username == "" || confirmPassword == ""){
+        return res.render('signup', {
+            message: 'Do not leave any blank !',
+            type: 'alert-danger'
+        })
+    }
 
     // Kiem tra confirm password va password giong nhau
     if (password != confirmPassword){

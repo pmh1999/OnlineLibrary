@@ -44,6 +44,9 @@ app.use((req, res, next) => {
     var cart = new Cart(req.session.cart ? req.session.cart: {});
     req.session.cart = cart;
     res.locals.totalQuantity = cart.totalQuantity;
+
+    req.locals.username = req.session.user ? req.session.user.username : '';
+    req.locals.isLoggedIn = req.session.user ? true : false; 
     next();
 });
 
