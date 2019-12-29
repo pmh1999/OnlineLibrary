@@ -7,7 +7,7 @@ router.get('/login', (req, res) =>{
     res.render('login');
 });
 
-router.get('/login', (req, res, next) =>{
+router.post('/login', (req, res, next) =>{
     let username = req.body.username;
     let password = req.body.password;
     userController
