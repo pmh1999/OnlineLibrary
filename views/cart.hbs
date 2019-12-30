@@ -17,7 +17,9 @@
 {{#with cart}}
 <div class="cart-main-area section-padding--lg bg--white">
     <div class="container">
-        <div class="row">
+        {{#if items.lenght}}
+        <div class="row" id="cart-body">
+            
             <div class="col-md-12 col-sm-12 ol-lg-12">
                 <form action="#">               
                     <div class="table-content wnro__table table-responsive">
@@ -46,7 +48,7 @@
                                             <div class="col-3">
                                             <button onclick="var result = document.getElementById('sst{{item.id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;updateCart({{item.id}},result.value);return false;"
                                                 class="increase items-count" ; type="button"><i class="lnr lnr-chevron-up"></i>&#9650;</button>
-                                            <button onclick="var result = document.getElementById('sst{{item.id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ||(stt==1)&amp;&amp;confirm('Do you want to remove this book?') ) result.value--;updateCart({{item.id}},result.value);return false;"
+                                            <button onclick="var result = document.getElementById('sst{{item.id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ||(sst==1)&amp;&amp;confirm('Do you want to remove this book?') ) result.value--;updateCart({{item.id}},result.value);return false;"
                                                 class="reduced items-count"; type="button"><i class="lnr lnr-chevron-down"></i>&#9660;</button>
                                             </div>
                                         </div>
@@ -62,13 +64,15 @@
                 <div class="cartbox__btn">
                     <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
 
-                        <li><a href="#">Update Cart</a></li>
+                        <li><a class="button bg-danger text-white" onclick="clearCart()">Clear Cart</a></li>
                         <li><a href="#">Check Out</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
+        {{else }}
+        <div class="alert alert-info text-center">Your cart is empty</div>
+        {{/if}}
     </div>  
 </div>
 {{/with}}

@@ -49,3 +49,16 @@ function updateCartItem(id,quantity){
         }
     });
 }
+
+function clearCart(){
+    if(confirm('Do you really want to clear all items?')){
+    $.ajax({
+        url: "/cart/all",
+        type: 'DELETE',
+        success: function (result) {
+            $('#cart-badge').html('0');
+            $('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>')
+        }
+    });
+    }
+}
