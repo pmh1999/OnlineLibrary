@@ -16,7 +16,7 @@ function addToCart() {
 }
 
 function updateCart(id,quantity){
-    if(quatity == 0)
+    if(quantity == 0)
     {
         removeCartItem(id);
     }else{
@@ -38,11 +38,11 @@ function removeCartItem(id){
     });
 }
 
-function updateCartItem(id,quatity){
+function updateCartItem(id,quantity){
     $.ajax({
         url: "/cart",
         type: 'PUT',
-        data: { id,quatity },
+        data: { id,quantity },
         success: function (result) {
             $('#cart-badge').html(result.totalQuantity);
 
