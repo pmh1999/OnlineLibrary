@@ -100,7 +100,19 @@
             <p>Nội dung: {{description}}</p>
             <p>Số lượng: {{amount}}</p>
           </div>
-          <button class="add-to-cart" data-id="{{id}}"><i class="ti-shopping-cart"></i></button c></<button>
+          <div class="product-count col-lg-5 offset-lg-1">
+              <label for="qty">Quantity:</label>
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst >= 0 ) result.value--;return false;"
+               class="reduced items-count" style="width: 50px;background-color: Transparent; border: none;"><i class="lnr lnr-chevron-down"></i>&#9664;</button>
+
+              
+							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty" readonly>
+
+              <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							 class="increase items-count" style="width: 50px;background-color: Transparent; border: none;"><i class="lnr lnr-chevron-up"></i>&#9654;</button>
+							<a class="button primary-btn add-to-cart" type="button" data-id ="{{id}}">Add to Cart</a>               
+						</div>
+            
         </div>
         {{/each}}
     </div>

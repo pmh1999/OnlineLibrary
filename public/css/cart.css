@@ -375,7 +375,8 @@ caption,
 th,
 td {
   font-weight: normal;
-  text-align: left; }
+  text-align: center; 
+}
 
 caption {
   font-size: 16px;
@@ -385,9 +386,7 @@ th {
   font-weight: bold;
   text-transform: uppercase; }
 
-td {
-  border-top: 1px solid #ededed;
-  padding: 6px 10px 6px 0; }
+
 
 del {
   color: #333; }
@@ -4676,7 +4675,7 @@ h3.widget-title-modal {
 }
   .gallery__menu button {
     background: #fff none repeat scroll 0 0;
-    color: color: #333;
+    color: #333;
     border: medium none;
     display: inline-block;
     font-size: 12px;
@@ -5263,7 +5262,8 @@ h3.widget-title-modal {
 .table-content table td.product-remove i:hover {
   color: #252525; }
 .table-content table td.product-quantity {
-  width: 180px; }
+  width: 180px; 
+}
 .table-content table td.product-remove {
   width: 150px; }
 .table-content table td.product-price {
@@ -5753,7 +5753,7 @@ a.checkout__title {
       .wedget__categories.poroduct--cat ul li a:hover {
         color: #e59285; }
       .wedget__categories.poroduct--cat ul li a span {
-        color: ##333;
+        color: #333;
         float: right; }
 .wedget__categories.pro--range {
   margin: 0 0 30px; }
@@ -6254,4 +6254,11 @@ section.wn_contact_area {
 section.wn_contact_area {
   padding-bottom: 60px;
 }
+}
+.qty{
+  margin-left: 100px;
+  margin-top: 20px;
+}
+button.items-count{
+  width: 100px;
 }
