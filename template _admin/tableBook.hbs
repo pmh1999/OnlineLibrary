@@ -30,17 +30,19 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                        <td>Tiger Nixon</td>
-                        <td>System Architect</td>
-                        <td>Edinburgh</td>
-                        <td>61</td>
-                        <td>2011/04/25</td>
-                        <td>
-                          <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
-                          <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
-                        </td>
-                    </tr>
+                    {{#each book}}
+                      <tr>
+                          <td>Tiger Nixon</td>
+                          <td>System Architect</td>
+                          <td>Edinburgh</td>
+                          <td>61</td>
+                          <td>2011/04/25</td>
+                          <td>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
+                          </td>
+                      </tr>
+                    {{/each}}
                   </tbody>
                 </table>
               </div>
