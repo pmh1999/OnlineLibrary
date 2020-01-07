@@ -20,11 +20,16 @@
 
 
   <body>
-    {{> header }}
-    
-    {{{ body }}}
+    {{#if isAdmin}}
+      {{{ body }}}
+    {{else}}
+      {{> header }}
+      
+      {{{ body }}}
 
-    {{> footer }}
+      {{> footer }}
+    {{/if}}
+
     
 
     <!-- Optional JavaScript -->
