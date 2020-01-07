@@ -46,6 +46,7 @@ app.use((req, res, next) => {
     res.locals.totalQuantity = cart.totalQuantity;
 
     res.locals.fullname = req.session.user ? req.session.user.fullname : '';
+    res.locals.isAdmin = req.session.user ? req.session.user.isAdmin : false;
     res.locals.isLoggedIn = req.session.user ? true : false; 
     next();
 });
