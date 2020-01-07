@@ -314,4 +314,11 @@ a {
     padding-top: 4px;
     width: 100px;
 }
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between
+  }
 /*======== page giới thiệu trường =========*/
