@@ -89,7 +89,7 @@
           <div class="col-3" id="book">
             <a href="/books/{{id}}"><img class="imgBook" src={{thumbnailPath}} alt=""></a>
           </div>
-          <div class="col" id='text'>
+          <div class="col-4" id='text'>
             <p>Tên sách: {{title}}</p>
             <p>ISBN: {{isbn}}</p>
             <p>Thể loại: {{category}}</p>
@@ -100,17 +100,9 @@
             <p>Nội dung: {{description}}</p>
             <p>Số lượng: {{amount}}</p>
           </div>
-          <div class="product-count col-lg-5 offset-lg-1">
-              <label for="qty">Quantity:</label>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst >= 0 ) result.value--;return false;"
-               class="reduced items-count" style="width: 50px;background-color: Transparent; border: none;"><i class="lnr lnr-chevron-down"></i>&#9664;</button>
-
-              
-							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty" readonly>
-
-              <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-							 class="increase items-count" style="width: 50px;background-color: Transparent; border: none;"><i class="lnr lnr-chevron-up"></i>&#9654;</button>
-							<a class="button primary-btn add-to-cart" role="button"  data-id ="{{id}}">Add to Cart</a>               
+          <div class="product-count col offset-lg-1">
+            <br><br><br><br>
+          <a class="button primary-btn add-to-cart" role="button" style="color: aliceblue;"  data-id ="{{id}}">Add to Cart</a>               
 						</div>
             
         </div>

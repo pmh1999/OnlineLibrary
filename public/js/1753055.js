@@ -32,8 +32,12 @@ function removeCartItem(id){
         data: { id },
         success: function (result) {
             $('#cart-badge').html(result.totalQuantity);
+            if(result.totalQuantity > 0){
             $(`#item${id}`).remove();
+            }else{
+                $('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>');
 
+            }
         }
     });
 }
@@ -57,7 +61,7 @@ function clearCart(){
         type: 'DELETE',
         success: function (result) {
             $('#cart-badge').html('0');
-            $('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>')
+            $('#cart-body').html('<div class="alert alert-info text-center">Your cart is empty</div>');
         }
     });
     }

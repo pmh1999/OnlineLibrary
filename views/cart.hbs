@@ -15,11 +15,10 @@
 	<!-- Modernizer js -->
 	<script src="public/vendor/modernizr-3.5.0.min.js"></script>
 {{#with cart}}
-<div class="cart-main-area section-padding--lg bg--white">
+<div class="cart-main-area section-padding--lg bg--white" style="min-height:520px ;">
     <div class="container">
-        {{#if items.lenght}}
         <div class="row" id="cart-body">
-            
+            {{#if items.length}}
             <div class="col-md-12 col-sm-12 ol-lg-12">
                 <form action="#">               
                     <div class="table-content wnro__table table-responsive">
@@ -29,7 +28,7 @@
                                     <th class="product-thumbnail">Image</th>
                                     <th class="product-name">Title</th>
                                     <th class="product-author">Author</th>
-                                    <th class="product-quantity">Quantity</th>
+                                    <th class="product-quantity">Available</th>
                                     <th class="product-publishYear">Publish Year</th>
                                     <th class="product-remove">Remove</th>
                                 </tr>
@@ -40,21 +39,9 @@
                                     <td class="product-thumbnail"><a href="#"></a><img src="{{item.thumbnailPath}}" alt="product img"></a></td>
                                     <td class="product-name"><a href="#">{{item.title}}</a></td>
                                     <td class="product-author"><span class="author">{{item.author}}</span></td>
-                                    <td>
-                                        <div class="product_count row">
-
-                                            <input type="text" name="qty" id="sst{{item.id}}" maxlength="12" value="{{quantity}}" title="Quantity:"
-                                                class="input-text qty col-2" readonly>
-                                            <div class="col-3">
-                                            <button onclick="var result = document.getElementById('sst{{item.id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;updateCart({{item.id}},result.value);return false;"
-                                                class="increase items-count" ; type="button"><i class="lnr lnr-chevron-up"></i>&#9650;</button>
-                                            <button onclick="var result = document.getElementById('sst{{item.id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ||(sst==1)&amp;&amp;confirm('Do you want to remove this book?') ) result.value--;updateCart({{item.id}},result.value);return false;"
-                                                class="reduced items-count"; type="button"><i class="lnr lnr-chevron-down"></i>&#9660;</button>
-                                            </div>
-                                        </div>
-                                    </td>
+                                    <td class="product-quatity"> <span >{{item.amount}}</span></td>
                                     <td class="product-publishYear">{{item.publishYear}}</td>
-                                    <td class="product-remove"><a href="#">X</a></td>
+                                    <td class="product-remove"><a role="button" onclick="removeCartItem({{item.id}})">X</a></td>
                                 </tr>
                                 {{/each}}
                             </tbody>
@@ -69,10 +56,11 @@
                     </ul>
                 </div>
             </div>
+            {{else}}
+            <div class="alert alert-info text-center">Your cart is empty</div>
+            {{/if}}
         </div>
-        {{else }}
-        <div class="alert alert-info text-center">Your cart is empty</div>
-        {{/if}}
+
     </div>  
 </div>
 {{/with}}
