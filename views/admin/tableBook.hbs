@@ -19,6 +19,22 @@
                       <th>Đánh giá</th>
                     </tr>
                   </thead>
+                  
+                  <tbody>
+                    {{#each book}}
+                      <tr>
+                          <td>{{id}}</td>
+                          <td>{{title}}</td>
+                          <td>{{author}}</td>
+                          <td>{{publishYear}}</td>
+                          <td>{{amount}}</td>
+                          <td>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
+                          </td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
                   <tfoot>
                     <tr>
                       <th>ID</th>
@@ -29,21 +45,6 @@
                       <th>Đánh giá</th>
                     </tr>
                   </tfoot>
-                  <tbody>
-                    {{#each book}}
-                      <tr>
-                          <td>Tiger Nixon</td>
-                          <td>System Architect</td>
-                          <td>Edinburgh</td>
-                          <td>61</td>
-                          <td>2011/04/25</td>
-                          <td>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
-                          </td>
-                      </tr>
-                    {{/each}}
-                  </tbody>
                 </table>
               </div>
             </div>
@@ -51,3 +52,14 @@
 
         </div>
         <!-- /.container-fluid -->
+<script>
+             let urlParams = new URLSearchParams(location.search);
+
+    let params = {
+      limit: 9,
+      sort: 'title',
+      search: '',
+      page: 1,
+      Science:0
+    }
+    </script>

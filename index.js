@@ -53,7 +53,7 @@ app.use((req, res, next) => {
 
 //Define your routes here 
 app.get('/', require('./router/indexRouter'));
-
+app.use('/admin',require('./router/AdminBookRouter'));
 app.use('/books', require('./router/bookRouter'));
 app.use('/cart', require('./router/cartRouter'));
 app.use('/users', require('./router/userRouter'));

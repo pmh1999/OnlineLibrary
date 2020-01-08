@@ -19,7 +19,7 @@ router.post('/login', (req, res, next) =>{
                     req.session.cookie.maxAge = keepLoggedIn ? 30 * 24 * 60 * 60 * 100 : null;
                     req.session.user = user;
                     if (user.isAdmin == true){
-                        res.redirect('/adminlayout')
+                        res.redirect('/admin')
                     } else{
                         res.redirect('/');
                     }

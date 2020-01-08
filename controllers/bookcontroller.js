@@ -76,6 +76,9 @@ controller.getAll= (query)=>{
                 case 'amount':
                     options.order = [['amount', 'ASC']];
                     break;
+                case 'id':
+                    options.order = [['id','ASC']];
+                    break;    
                 default:
                     options.order = [['title', 'ASC']];
                     break;
