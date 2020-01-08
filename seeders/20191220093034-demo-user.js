@@ -17,6 +17,69 @@ module.exports = {
       "phone": "789-159-0941",
       "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
       "isAdmin": false
+    },{
+      "username": "sburel0@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 1",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel1@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 2",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel2@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 3",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel3@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 4",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel4@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 5",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel5@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 6",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel6@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 7",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel7@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 8",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
+    },{
+      "username": "sburel8@sciencedaily.com",
+      "password": "VkY0aOVsR",
+      "fullname": "Shawn 9",
+      "phone": "789-159-0941",
+      "avatarPath": "http://dummyimage.com/136x204.jpg/dddddd/000000",
+      "isAdmin": false
     }];
 
     data.map(item =>{
