@@ -142,7 +142,7 @@
     }
 
     $(document).ready(()=> {
-      
+      $('#Science').prop('checked');
       let checkboxes = ['Science','Lesson Plan','Thesis','Programming','Science fiction','Algorithm'];
       for(let key of checkboxes)
       {
@@ -165,6 +165,7 @@
     
 
     function selectParam(key, value, reset = false){
+      sessionStorage.setItem("category",value);
       if (reset){
         for (let key in params){
           urlParams.set(key, params[key]);
