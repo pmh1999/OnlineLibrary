@@ -45,25 +45,59 @@ router.post("/sendRequest",function(req,res,next) {
     let date = req.body.date;
     let id1 = req.body.id1;
     let id2 = req.body.id2;
+    let id3 = req.body.id3;
     let userid = res.locals.userid;
     console.log(res.locals);
     console.log(req.body);
 
     let borrowDate = new Date(date);
-    console.log(borrowDate);
-    let dueDate = new Date(borrowDate.getFullYear,borrowDate.getMonth,borrowDate.getDate+15);
 
     let data = {
-        borrowDate: borrowDate,
-        dueDate: dueDate,
+        appointmentDate: borrowDate,
+        isAccepted: false,
+        type: "Borrow",
         BookInfoId: id1,
         UserId: userid
     }
-
-    let borrow = require("../controllers/borrowController");
-    borrow.createBorrow(data).then(borrow => {
-        res.render("index");}
+    
+    let borrow = require("../controllers/requestcontroller");
+    let borrow2 = require("../controllers/requestcontroller");
+    let borrow3 = require("../controllers/requestcontroller");
+    borrow.createRequest(data).then(borrow => {
+        if (id2 != ""){
+            let data2 = {
+                appointmentDate: borrowDate,
+                isAccepted: false,
+                type: "Borrow",
+                BookInfoId: id2,
+                UserId: userid
+            }
+            borrow2.createRequest(data2).then(borrow2 => {
+                if (id3 != ""){
+                    let data3 = {
+                        appointmentDate: borrowDate,
+                        isAccepted: false,
+                        type: "Borrow",
+                        BookInfoId: id2,
+                        UserId: userid
+                    }
+                    borrow3.createRequest(data3).then(borrow3 => {
+                        req.session.cart.empty();
+                        return res.render("cart");
+                    })     
+                }
+            })     
+           }
+           req.session.cart.empty();
+           console.log(req.session);
+           res.render('cart');
+           
+        }
     )
+    
+    //res.writeHead(301, {"Location": "/"});
+    
+   
     //if (id2 == '')
 })
 module.exports = router;

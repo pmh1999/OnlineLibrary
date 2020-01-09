@@ -1,8 +1,8 @@
 var models = require("../models");
 var controller = {};
-let authorInfo= models.Author;
+let Author= models.Author
 
-controller.getAll=()=>{
+controller.getAll= (query)=>{
     return new Promise((resovle,reject)=>{
         let = options ={
             where: {}
@@ -58,9 +58,12 @@ controller.getAll=()=>{
 
         
 
-        BookInfo
+        Author
             .findAndCountAll(options)
             .then(data =>resovle(data))
             .catch(error => reject(new Error(error)));
     });
 };
+
+
+module.exports = controller;
