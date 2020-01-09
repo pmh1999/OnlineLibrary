@@ -6,121 +6,121 @@ module.exports = {
     let data =[{
       "appointmentDate": "11/06/2019",
       "isAccepted": true,
-      "type": "‪‪test‪",
+      "type": "Borrow",
       "BookInfoId": 15,
       "UserId": 2
     }, {
       "appointmentDate": "08/02/2019",
       "isAccepted": false,
-      "type": "test⁠test‫",
+      "type": "Borrow",
       "BookInfoId": 8,
       "UserId": 2
     }, {
       "appointmentDate": "07/11/2019",
       "isAccepted": true,
-      "type": "() { 0; }; touch /tmp/blns.shellshock1.fail;",
+      "type": "Extend",
       "BookInfoId": 20,
       "UserId": 6
     }, {
       "appointmentDate": "04/08/2019",
       "isAccepted": false,
-      "type": "1/0",
+      "type": "Extend",
       "BookInfoId": 10,
       "UserId": 10
     }, {
       "appointmentDate": "02/04/2019",
       "isAccepted": true,
-      "type": "ヽ༼ຈل͜ຈ༽ﾉ ヽ༼ຈل͜ຈ༽ﾉ ",
+      "type": "Borrow",
       "BookInfoId": 14,
       "UserId": 8
     }, {
       "appointmentDate": "11/04/2019",
       "isAccepted": true,
-      "type": "(｡◕ ∀ ◕｡)",
+      "type": "Borrow",
       "BookInfoId": 2,
       "UserId": 9
     }, {
       "appointmentDate": "03/02/2019",
       "isAccepted": false,
-      "type": "👩🏽",
+      "type": "Extend",
       "BookInfoId": 6,
       "UserId": 1
     }, {
       "appointmentDate": "08/11/2019",
       "isAccepted": true,
-      "type": "1E02",
+      "type": "Extend",
       "BookInfoId": 11,
       "UserId": 10
     }, {
       "appointmentDate": "08/01/2019",
       "isAccepted": false,
-      "type": "‪‪test‪",
+      "type": "Return",
       "BookInfoId": 14,
       "UserId": 3
     }, {
       "appointmentDate": "07/01/2019",
       "isAccepted": true,
-      "type": "0.00",
+      "type": "Borrow",
       "BookInfoId": 10,
       "UserId": 1
     }, {
       "appointmentDate": "07/03/2019",
       "isAccepted": false,
-      "type": "œ∑´®†¥¨ˆøπ“‘",
+      "type": "Extend",
       "BookInfoId": 4,
       "UserId": 8
     }, {
       "appointmentDate": "04/07/2019",
       "isAccepted": false,
-      "type": "../../../../../../../../../../../etc/hosts",
+      "type": "Extend",
       "BookInfoId": 3,
       "UserId": 10
     }, {
       "appointmentDate": "08/09/2019",
       "isAccepted": false,
-      "type": "パーティーへ行かないか",
+      "type": "Return",
       "BookInfoId": 2,
       "UserId": 6
     }, {
       "appointmentDate": "09/11/2019",
       "isAccepted": true,
-      "type": "˙ɐnbᴉlɐ ɐuƃɐɯ ǝɹolop ʇǝ ǝɹoqɐl ʇn ʇunpᴉpᴉɔuᴉ ɹodɯǝʇ poɯsnᴉǝ op pǝs 'ʇᴉlǝ ƃuᴉɔsᴉdᴉpɐ ɹnʇǝʇɔǝsuoɔ 'ʇǝɯɐ ʇᴉs ɹolop ɯnsdᴉ ɯǝɹo˥",
+      "type": "Extend",
       "BookInfoId": 19,
       "UserId": 7
     }, {
       "appointmentDate": "09/07/2019",
       "isAccepted": false,
-      "type": "👾 🙇 💁 🙅 🙆 🙋 🙎 🙍 ",
+      "type": "Extend",
       "BookInfoId": 6,
       "UserId": 10
     }, {
       "appointmentDate": "02/04/2019",
       "isAccepted": true,
-      "type": "-1.00",
+      "type": "Return",
       "BookInfoId": 18,
       "UserId": 9
     }, {
       "appointmentDate": "07/10/2019",
       "isAccepted": false,
-      "type": "🐵 🙈 🙉 🙊",
+      "type": "Extend",
       "BookInfoId": 9,
       "UserId": 3
     }, {
       "appointmentDate": "03/12/2019",
       "isAccepted": true,
-      "type": "<script>alert('hi')</script>",
+      "type": "Return",
       "BookInfoId": 4,
       "UserId": 5
     }, {
       "appointmentDate": "02/05/2019",
       "isAccepted": true,
-      "type": "⁰⁴⁵₀₁₂",
+      "type": "Borrow",
       "BookInfoId": 5,
       "UserId": 5
     }, {
       "appointmentDate": "03/01/2019",
       "isAccepted": false,
-      "type": "בְּרֵאשִׁית, בָּרָא אֱלֹהִים, אֵת הַשָּׁמַיִם, וְאֵת הָאָרֶץ",
+      "type": "Borrow",
       "BookInfoId": 6,
       "UserId": 6
     }];
