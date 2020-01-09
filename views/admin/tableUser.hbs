@@ -11,38 +11,27 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>Tên sách</th>
-                      <th>Tác giả</th>
-                      <th>Năm xuất bản</th>
-                      <th>Số lượng</th>
-                      <th>Đánh giá</th>
+                      <th>Username</th>
+                      <th>Họ và tên</th>
+                      <th>Số điện thoại</th>
                     </tr>
                   </thead>
                   
                   <tbody>
-                    {{#each book}}
+                    {{#each user}}
                       <tr>
-                          <td>{{id}}</td>
-                          <td>{{title}}</td>
-                          <td>{{author}}</td>
-                          <td>{{publishYear}}</td>
-                          <td>{{amount}}</td>
-                          <td>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
-                          </td>
+                          <td>{{username}}</td>
+                          <td>{{fullname}}</td>
+                          <td>{{phone}}</td>
+                          
                       </tr>
                     {{/each}}
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th>ID</th>
-                      <th>Tên sách</th>
-                      <th>Tác giả</th>
-                      <th>Năm xuất bản</th>
-                      <th>Số lượng</th>
-                      <th>Đánh giá</th>
+                      <th>Username</th>
+                      <th>Họ và tên</th>
+                      <th>Số điện thoại</th>
                     </tr>
                   </tfoot>
                 </table>

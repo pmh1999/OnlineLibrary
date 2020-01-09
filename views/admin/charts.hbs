@@ -3,8 +3,8 @@
 <div class="container-fluid">
 
   <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">Charts</h1>
-  <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme. The charts below have been customized - for further customization options, please visit the <a target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js documentation</a>.</p>
+  <h1 class="h3 mb-2 text-gray-800">Lượt mượn sách</h1>
+  <p class="mb-4">Biểu đồ số lượt mượn sách tính theo tháng hoặc thứ trong tuần.</p>
 
   <!-- Content Row -->
   <div class="row">
@@ -14,31 +14,28 @@
       <!-- Area Chart -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Biểu đồ đường</h6>
         </div>
         <div class="card-body">
           <div class="chart-area">
             <canvas id="myAreaChart"></canvas>
           </div>
           <hr>
-          Styling for the area chart can be found in the <code>/js/demo/chart-area-demo.js</code> file.
         </div>
       </div>
 
       <!-- Bar Chart -->
       <div class="card shadow mb-4">
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Biểu đồ cột</h6>
         </div>
         <div class="card-body">
           <div class="chart-bar">
             <canvas id="myBarChart"></canvas>
           </div>
           <hr>
-          Styling for the bar chart can be found in the <code>/js/demo/chart-bar-demo.js</code> file.
         </div>
       </div>
-
     </div>
 
     <!-- Donut Chart -->
@@ -46,7 +43,7 @@
       <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Donut Chart</h6>
+          <h6 class="m-0 font-weight-bold text-primary">Biểu đồ tròn</h6>
         </div>
         <!-- Card Body -->
         <div class="card-body">
@@ -54,7 +51,6 @@
             <canvas id="myPieChart"></canvas>
           </div>
           <hr>
-          Styling for the donut chart can be found in the <code>/js/demo/chart-pie-demo.js</code> file.
         </div>
       </div>
     </div>
@@ -73,8 +69,10 @@
   //console.log(data);
   let temp = [];
   let month = [0,0,0,0,0,0,0,0,0,0,0,0];
+  let date = [0,0,0,0,0,0,0];
   data.forEach(function (item, index, array) {
     temp = item.split(" ");
+
     if (temp[1] == "Jan")
       month[0]++;
     else if (temp[1] == "Feb")
@@ -99,6 +97,21 @@
     month[11]++;
       else if (temp[1] == "Aug")
     month[7]++;
+
+    if (temp[0] == "Mon")
+      date[0]++;
+    else if (temp[0] == "Tue")
+      date[1]++;
+    else if (temp[0] == "Wed")
+      date[2]++;
+    else if (temp[0] == "Thu")
+      date[3]++;
+    else if (temp[0] == "Fri")
+      date[4]++;
+    else if (temp[0] == "Sat")
+      date[5]++;
+    else if (temp[0] == "Sun")
+      date[6]++;
   });
   // Set new default font family and font color to mimic Bootstrap's default styling
 Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
@@ -326,6 +339,39 @@ var myBarChart = new Chart(ctx, {
     },
   }
 });
+
+// Pie Chart Example
+var ctx = document.getElementById("myPieChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    datasets: [{
+      data: date,
+      backgroundColor: ['red', 'blue', 'green', 'gray','yellow','pink','purple'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 80,
+  },
+});
+
 </script>
 <!-- /.container-fluid -->
 
