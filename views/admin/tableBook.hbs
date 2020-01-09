@@ -16,7 +16,6 @@
                       <th>Tác giả</th>
                       <th>Năm xuất bản</th>
                       <th>Số lượng</th>
-                      <th>Đánh giá</th>
                     </tr>
                   </thead>
                   
@@ -27,10 +26,10 @@
                           <td>{{title}}</td>
                           <td>{{author}}</td>
                           <td>{{publishYear}}</td>
-                          <td>{{amount}}</td>
                           <td>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
-                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-minus"></i></a>
+                            {{amount}}
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-plus"></i></a>
                           </td>
                       </tr>
                     {{/each}}
@@ -42,7 +41,6 @@
                       <th>Tác giả</th>
                       <th>Năm xuất bản</th>
                       <th>Số lượng</th>
-                      <th>Đánh giá</th>
                     </tr>
                   </tfoot>
                 </table>
