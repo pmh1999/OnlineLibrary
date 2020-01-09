@@ -143,8 +143,8 @@ module.exports = {
       "language": "English",
       "haveCD": true,
       "amount": 4,
-      "imagePath": "/img/12.jpg",
-      "thumbnailPath": "/img/12.jpg",
+      "imagePath": "/img/12.jpeg",
+      "thumbnailPath": "/img/12.jpeg",
       "description": "Antigen Laboratories, Inc."
     }, {
       "isbn": "259091611-6",
