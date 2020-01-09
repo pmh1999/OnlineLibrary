@@ -80,7 +80,14 @@ router.get('/tableauthor',(req,res,next)=>{
 });
 
 router.get('/chart',(req,res,next)=>{
-    res.render('admin/charts');
+    let borrow = require("../controllers/borrowController");
+   borrow
+    .getAll()
+    .then(data =>{
+        res.locals.borrow =data;
+        res.render('admin/charts');  
+    })
+    .catch(error=>{next(error);})
 });
 
 
