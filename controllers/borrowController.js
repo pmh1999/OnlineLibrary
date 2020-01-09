@@ -11,4 +11,7 @@ controller.getAll= ()=>{
     });
 };
 
+controller.createBorrow=(req) => {
+    return Borrow.create(req);
+}
 module.exports = controller;
