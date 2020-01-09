@@ -41,4 +41,29 @@ router.delete("/all",(req,res)=>{
     res.end;
 })
 
+router.post("/sendRequest",function(req,res,next) {
+    let date = req.body.date;
+    let id1 = req.body.id1;
+    let id2 = req.body.id2;
+    let userid = res.locals.userid;
+    console.log(res.locals);
+    console.log(req.body);
+
+    let borrowDate = new Date(date);
+    console.log(borrowDate);
+    let dueDate = new Date(borrowDate.getFullYear,borrowDate.getMonth,borrowDate.getDate+15);
+
+    let data = {
+        borrowDate: borrowDate,
+        dueDate: dueDate,
+        BookInfoId: id1,
+        UserId: userid
+    }
+
+    let borrow = require("../controllers/borrowController");
+    borrow.createBorrow(data).then(borrow => {
+        res.render("index");}
+    )
+    //if (id2 == '')
+})
 module.exports = router;
