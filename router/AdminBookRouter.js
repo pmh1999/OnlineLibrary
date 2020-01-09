@@ -72,7 +72,8 @@ router.get('/tablerequest',(req,res,next)=>{
                 limit: parseInt(req.query.limit),
                 totalRows: data.count
             };
-            res.render('admin/tableBook');            
+            res.render('admin/tableAthour');
+            
         })
         .catch(error=>{next(error);})
 });

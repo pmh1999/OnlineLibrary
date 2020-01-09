@@ -108,4 +108,38 @@ router.get('/logout', (req, res, next) => {
         return res.redirect('login');
     })
 });
-module.exports = router;
+
+router.get("/profile", function(req, res) {
+    res.render("profile");
+  });
+  
+  router.post("/profile", (req, res, next) => {
+    tmp = req.session.user;
+    let fullName = req.body.fullname == "" ? tmp.name : req.body.fullname;
+    let id = req.body.id == "" ? tmp.personalID : req.body.id;
+    let dob = req.body.dob == "" ? tmp.birth : req.body.dob;
+    let phone = req.body.phone == "" ? tmp.phone : req.body.phone;
+
+    userController
+      .getUserByEmail(tmp.email)
+      .then(user => {
+        if (user) {
+          user.update({
+            name: fullName,
+            personalID: id,
+            address,
+            birth: dob,
+            phone
+          });
+          req.session.user = user;
+          res.locals.user = user;
+          return res.render("profile", {
+            message: "Update User Info Success",
+            type: "alert-primary"
+          });
+        }
+      })
+      .catch(error => next(error));
+  });
+  
+  module.exports = router;
