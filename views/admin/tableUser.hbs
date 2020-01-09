@@ -1,0 +1,66 @@
+<!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Danh sách sách</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Tên sách</th>
+                      <th>Tác giả</th>
+                      <th>Năm xuất bản</th>
+                      <th>Số lượng</th>
+                      <th>Đánh giá</th>
+                    </tr>
+                  </thead>
+                  
+                  <tbody>
+                    {{#each book}}
+                      <tr>
+                          <td>{{id}}</td>
+                          <td>{{title}}</td>
+                          <td>{{author}}</td>
+                          <td>{{publishYear}}</td>
+                          <td>{{amount}}</td>
+                          <td>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-check-square"></i></a>
+                            <a href="adminlayout.html"><i class="fas fa-fw fa-window-close"></i></a>
+                          </td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>ID</th>
+                      <th>Tên sách</th>
+                      <th>Tác giả</th>
+                      <th>Năm xuất bản</th>
+                      <th>Số lượng</th>
+                      <th>Đánh giá</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- /.container-fluid -->
+<script>
+             let urlParams = new URLSearchParams(location.search);
+
+    let params = {
+      limit: 9,
+      sort: 'title',
+      search: '',
+      page: 1,
+      Science:0
+    }
+</script>

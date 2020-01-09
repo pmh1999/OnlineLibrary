@@ -59,7 +59,7 @@
             <div id="collapseBook" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Quản lý sách:</h6>
-                <a class="collapse-item" href="admin/tablebook">Tất cả sách</a>
+                <a class="collapse-item" href="/admin/tablebook">Tất cả sách</a>
                 <a class="collapse-item" href="cards.html">Thêm sách</a>
               </div>
             </div>
@@ -76,7 +76,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Quản lý tác giả:</h6>
-                <a class="collapse-item" href="tables.html">Danh sách tác giả</a>
+                <a class="collapse-item" href="/admin/tableauthor">Danh sách tác giả</a>
                 <a class="collapse-item" href="cards.html">Thêm tác giả</a>
               </div>
             </div>
@@ -88,24 +88,15 @@
 
           <!-- Nav Item - Yêu cầu Collapse Menu -->
           <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+            <a class="nav-link" href="/admin/tablerequest">
               <i class="fas fa-fw fa-question"></i>
-              <span>Yêu cầu</span>
-            </a>
-            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-              <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Quản lý yêu cầu:</h6>
-                <a class="collapse-item" href="login.html">Yêu cầu mượn sách</a>
-                <a class="collapse-item" href="register.html">Yêu cầu mua sách</a>
-              </div>
-            </div>
+              <span>Danh sách yêu cầu</span></a>
           </li>
-
           <hr class="sidebar-divider">
 
           <!-- Nav Item - Charts -->
           <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="/admin/tableuser">
               <i class="fas fa-fw fa-user"></i>
               <span>Danh sách thành viên</span></a>
           </li>
@@ -113,7 +104,7 @@
 
           <!-- Nav Item - Charts -->
           <li class="nav-item">
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/admin/chart">
               <i class="fas fa-fw fa-chart-area"></i>
               <span>Thống kê</span></a>
           </li>
@@ -375,7 +366,7 @@
       <script src="/vendors/datatables/dataTables.bootstrap4.min.js"></script>
 
       <!-- Page level custom scripts -->
-      <script src="js/demo/datatables-demo.js"></script>
+      <script src="/js/demo/datatables-demo.js"></script>
 
 
     </body>
