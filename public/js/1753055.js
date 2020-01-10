@@ -5,6 +5,7 @@ $(document).ready(() => {
 function addToCart() {
     var id = $(this).data('id');
     var quantity = $('#sst')? $('#sst').val() : 1;
+
     $.ajax({
         url: "/cart",
         type: 'POST',
@@ -13,7 +14,8 @@ function addToCart() {
             $('#cart-badge').html(result.totalQuantity);
         }
     })
-}
+};
+
 
 function updateCart(id,quantity){
     if(quantity == 0)
