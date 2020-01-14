@@ -15,7 +15,6 @@ controller.getById= (id)=>{
             .catch(error => reject(new Error(error)));
     });
 };
-
 controller.getByCate= (category)=>{
     return new Promise((resovle,reject)=>{
         let options ={
@@ -94,7 +93,9 @@ controller.getAll= (query)=>{
     });
 };
 
-
+controller.createRequest=(request) => {
+    return BookInfo.create(request);
+}
 controller.getNew= (id)=>{
     return new Promise((resovle,reject)=>{
         let options ={
