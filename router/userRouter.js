@@ -88,6 +88,7 @@ router.post('/signup', (req, res, next) =>{
                     if (keepLoggedIn){
                         req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 100;
                         req.session.user = user;
+
                         res.redirect('/');
                     } else{
                         res.render('login', {
@@ -109,9 +110,9 @@ router.get('/logout', (req, res, next) => {
     })
 });
 
-router.get("/profile", function(req, res) {
-    res.render("profile");
-  });
+router.get("/info", function(req, res) {
+    res.render('info');
+ });
   
   router.post("/profile", (req, res, next) => {
     tmp = req.session.user;

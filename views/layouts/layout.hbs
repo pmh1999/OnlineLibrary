@@ -34,7 +34,7 @@
             <div class="sidebar-brand-icon rotate-n-15">
               <i class="fas fa-laugh-wink"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            <div class="sidebar-brand-text mx-3">Quản lý</div>
           </a>
 
           <!-- Divider -->
@@ -61,7 +61,7 @@
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Quản lý sách:</h6>
                 <a class="collapse-item" href="/admin/tablebook">Tất cả sách</a>
-                <a class="collapse-item" href="cards.html">Thêm sách</a>
+                <a class="collapse-item" href="/admin/addBook">Thêm sách</a>
               </div>
             </div>
           </li>
@@ -78,7 +78,24 @@
               <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Quản lý tác giả:</h6>
                 <a class="collapse-item" href="/admin/tableauthor">Danh sách tác giả</a>
-                <a class="collapse-item" href="cards.html">Thêm tác giả</a>
+                <a class="collapse-item" href="/admin/addauthor">Thêm tác giả</a>
+              </div>
+            </div>
+          </li>
+
+          <hr class="sidebar-divider">
+
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapseTwo">
+              <i class="fas fa-fw fa-boxes"></i>
+              <span>Thể loại</span>
+            </a>
+            <div id="collapse4" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Quản lý thể loại:</h6>
+                <a class="collapse-item" href="/admin/tablecategory">Danh sách thể loại</a>
+                <a class="collapse-item" href="/admin/addauthor">Thêm thể loại</a>
               </div>
             </div>
           </li>
@@ -258,6 +275,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- File CSS -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/category.css">
+
     <!-- File JavaScript -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -273,7 +292,7 @@
       {{> header }}
       
       {{{ body }}}
-
+      <br><br>
       {{> footer }}
 
     
@@ -290,6 +309,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="/js/1753055.js"></script>
+
   </body>
   {{/if}}
 

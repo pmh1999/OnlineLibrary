@@ -86,7 +86,7 @@
         {{#each book}}
         <div class="row" id="coverBook">
           <div class="col-3" id="book">
-            <a href="/books/{{id}}"><img class="imgBook" src={{thumbnailPath}} alt=""></a>
+            <a href="/books/{{id}}"><img class="imgBook" src='{{thumbnailPath}}' alt=""></a>
           </div>
           <div class="col-4" id='text'>
             <p>Tên sách: {{title}}</p>
@@ -100,8 +100,10 @@
             <p>Số lượng: {{amount}}</p>
           </div>
           <div class="product-count col offset-lg-1">
-            <br><br><br><br>
-          <a class="button primary-btn add-to-cart" role="button" style="color: aliceblue;"  data-id ="{{id}}">Add to Cart</a>               
+            <br><br>
+            <div id="error-message"></div>
+            <br><br>
+          <a class="button primary-btn add-to-cart" role="button" style="color: aliceblue;"  data-id ="{{id}}">Thêm vào giỏ</a>               
 						</div>
             
         </div>
@@ -147,7 +149,6 @@
       {
         let control = $(`#${key}${urlParams.get(key)}`);
         if(control){
-          console.log(control);
 
           $(control).prop('checked',true);
         }
