@@ -16,11 +16,15 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": false
+    "username": "kxuyzkrdxtpsos",
+    "password": "9b51c7837938e9321060b2cc1e95e5201bf4a3934294511c5c9469338d11a653",
+    "database": "ddd9fc569lhatm",
+    "host": "ec2-3-220-86-239.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "operatorsAliases": false,
+    "port": 5432,
+    "dialectOptions": {
+      "ssl": true
+    }
   }
 }
