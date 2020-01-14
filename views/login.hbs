@@ -17,29 +17,29 @@
             <div class="container">
                 <div class="signup-content">
                     <form action="/users/login" method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Log in</h2>
+                        <h2 class="form-title">Đăng nhập</h2>
                         {{#if message}}
                         <div class="form-group">
                             <strong class="alert {{type}}">{{message}}</strong>
                         </div>
                         {{/if}}
                         <div class="form-group">
-                            <input type="email" class="form-input" name="username" id="username" placeholder="Your Email"/>
+                            <input type="email" class="form-input" name="username" id="username" placeholder="Email"/>
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Mật khẩu"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
                             <input type="checkbox" name="keepLoggedIn" id="keepLoggedIn" class="agree-term" />
-                            <label for="keepLoggedIn" class="label-agree-term"><span><span></span></span>Keep me logged in</label>
+                            <label for="keepLoggedIn" class="label-agree-term"><span><span></span></span>Giữ trạng thái đăng nhập</label>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="form-submit" value="Log in"/>
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Đăng nhập"/>
                         </div>
                     </form a>
                     <p class="loginhere">
-                        Don't have an account ? <a href="/users/signup" class="loginhere-link">Sign up here</a>
+                        Không có tài khoản ? <a href="/users/signup" class="loginhere-link">Đăng kí</a>
                     </p>
                 </div>
             </div>
